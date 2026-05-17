@@ -5,6 +5,7 @@
 ノード（要素）と矢印（関係性）をブラウザ上でビジュアル操作できる有向グラフエディタです。Google Colab上で動作し、Cloudflareトンネル経由で外部からアクセスできます。
 
 URL：https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
+
 このサイトにて紹介されていますPythonコードをGoogle Colab でも動作できるように編集しました。
 
 ---
@@ -101,5 +102,5 @@ Google Colab上でノートブックを開き、セルを**上から順番に実
 
 ## ライセンス
 
-[MIT License](LICENSE)
+MIT License
 
