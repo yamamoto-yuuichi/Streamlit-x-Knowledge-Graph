@@ -1,12 +1,10 @@
-# Streamlitでナレッジグラフに挑戦
-
 # 🕸️ GraphRAG Visual Editor
 
-ノード（要素）と矢印（関係性）をブラウザ上でビジュアル操作できる有向グラフエディタです。Google Colab上で動作し、Cloudflareトンネル経由で外部からアクセスできます。
+ノード（要素）と矢印（関係性）をブラウザ上でビジュアル操作できる有向グラフエディタです。Google Colab 上で動作し、Cloudflare トンネル経由で外部からアクセスできます。
 
-URL：https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
+本アプリは、ルミナイ株式会社（執筆：宮脇彰梧氏）が MIT ライセンスで公開する Python コードを基に、Google Colab で動作するよう編集したものです。
 
-このサイトにて紹介されていますPythonコードをGoogle Colab でも動作できるように編集しました。
+- 元記事: https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
 
 ---
 
@@ -15,7 +13,7 @@ URL：https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
 - ノード（要素）を名前付きで追加できる
 - ノードをクリックして始点・終点を選択し、関係名付きのエッジ（矢印）で接続できる
 - グラフをブラウザ上でインタラクティブに表示・操作できる
-- 生成したグラフデータをJSON形式で確認できる
+- 生成したグラフデータを JSON 形式で確認できる
 - 全データを一括リセットできる
 
 ---
@@ -31,45 +29,45 @@ URL：https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
 
 ## 必要なライブラリ
 
-Google Colabのセル内で自動インストールされます。手動でインストールする場合は以下を実行してください。
+Google Colab のセル内で自動インストールされます。手動でインストールする場合は以下を実行してください。
 
-```bash
+\`\`\`bash
 pip install streamlit streamlit-agraph networkx pyngrok
-```
+\`\`\`
 
 また、外部公開には `cloudflared` バイナリが必要です。こちらもコード内で自動ダウンロードされます。
 
 | ライブラリ | 用途 |
 |------------|------|
-| `streamlit` | WebアプリのUI構築 |
+| `streamlit` | Web アプリの UI 構築 |
 | `streamlit-agraph` | インタラクティブなグラフ表示 |
 | `networkx` | グラフ構造の管理・計算 |
 | `pyngrok` | 外部公開（補助） |
-| `cloudflared` | Cloudflareトンネルによる外部公開 |
+| `cloudflared` | Cloudflare トンネルによる外部公開 |
 
 ---
 
 ## 使い方
 
-### 1. Google Colabでノートブックを開く
+### 1. Google Colab でノートブックを開く
 
-Google Colab上でノートブックを開き、セルを**上から順番に実行**してください。
+Google Colab 上でノートブックを開き、セルを**上から順番に実行**してください。
 
 ### 2. アプリの起動
 
 最終セルを実行すると、以下の処理が自動で行われます。
 
-1. Streamlitアプリが起動する（ポート: `8501`）
-2. Cloudflaredがトンネルを開く
-3. コンソールにアクセスURLが表示される
+1. Streamlit アプリが起動する（ポート: `8501`）
+2. cloudflared がトンネルを開く
+3. コンソールにアクセス URL が表示される
 
-```
+\`\`\`
 ✅ アクセスURL: https://xxxxxxxx.trycloudflare.com
-```
+\`\`\`
 
 ### 3. ブラウザでアクセス
 
-表示されたURLをブラウザで開くと、GraphRAG Visual Editorが使用できます。
+表示された URL をブラウザで開くと、GraphRAG Visual Editor が使用できます。
 
 ---
 
@@ -84,23 +82,24 @@ Google Colab上でノートブックを開き、セルを**上から順番に実
 3. 始点・終点が揃ったら関係名を入力し、「🔗 接続する」を押す
 
 **データの確認**
-画面下部の「📊 生成されたグラフデータ (JSON形式)」を展開するとJSON形式でデータを確認できます。
+画面下部の「📊 生成されたグラフデータ (JSON形式)」を展開すると、JSON 形式でデータを確認できます。
 
 **リセット**
-左サイドバーの「🗑️ 全データをリセット」ボタンで全ノード・エッジを削除できます。
+左サイドバーの「🗑️ 全データをリセット」ボタンで、全ノード・エッジを削除できます。
 
 ---
 
 ## ファイル構成
 
-```
+\`\`\`
 .
-└── app.py        # Streamlitアプリ本体（%%writefile で自動生成）
-```
+└── app.py        # Streamlit アプリ本体（%%writefile で自動生成）
+\`\`\`
 
 ---
 
 ## ライセンス
 
-MIT License
+MIT License. 詳細は [LICENSE](./LICENSE) を参照してください。
 
+本リポジトリの LICENSE は、元コードの著作権表示（`Copyright (c) 2025 ルミナイ株式会社`）を保持しています。
