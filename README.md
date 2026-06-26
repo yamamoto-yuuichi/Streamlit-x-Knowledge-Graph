@@ -8,6 +8,12 @@
 
 ---
 
+## 概要
+
+ナレッジグラフ（ノードと関係のネットワーク）を、コードを書かずに GUI 上で構築・編集できる Streamlit アプリです。AI が自動生成したグラフの誤りを人手で修正する Human-in-the-loop なワークフローを想定しています。
+
+---
+
 ## 主な機能
 
 - ノード（要素）を名前付きで追加できる
@@ -18,24 +24,12 @@
 
 ---
 
-## 動作環境
+## 技術スタック
 
 | 項目 | 内容 |
 |------|------|
 | 実行環境 | Google Colab |
 | 言語 | Python 3系 |
-
----
-
-## 必要なライブラリ
-
-Google Colab のセル内で自動インストールされます。手動でインストールする場合は以下を実行してください。
-
-\`\`\`bash
-pip install streamlit streamlit-agraph networkx pyngrok
-\`\`\`
-
-また、外部公開には `cloudflared` バイナリが必要です。こちらもコード内で自動ダウンロードされます。
 
 | ライブラリ | 用途 |
 |------------|------|
@@ -47,27 +41,21 @@ pip install streamlit streamlit-agraph networkx pyngrok
 
 ---
 
-## 使い方
+## セットアップ・実行手順
 
-### 1. Google Colab でノートブックを開く
+ライブラリは Google Colab のセル内で自動インストールされます。手動で行う場合は以下を実行してください。
 
-Google Colab 上でノートブックを開き、セルを**上から順番に実行**してください。
-
-### 2. アプリの起動
-
-最終セルを実行すると、以下の処理が自動で行われます。
-
-1. Streamlit アプリが起動する（ポート: `8501`）
-2. cloudflared がトンネルを開く
-3. コンソールにアクセス URL が表示される
-
-\`\`\`
-✅ アクセスURL: https://xxxxxxxx.trycloudflare.com
+\`\`\`bash
+pip install streamlit streamlit-agraph networkx pyngrok
 \`\`\`
 
-### 3. ブラウザでアクセス
+外部公開には `cloudflared` バイナリが必要です。こちらもコード内で自動ダウンロードされます。
 
-表示された URL をブラウザで開くと、GraphRAG Visual Editor が使用できます。
+実行手順:
+
+1. Google Colab 上でノートブックを開き、セルを上から順番に実行する。
+2. 最終セルを実行すると、Streamlit アプリの起動（ポート `8501`）、cloudflared のトンネル開通、アクセス URL の表示が自動で行われる。
+3. 表示された URL をブラウザで開く。
 
 ---
 
@@ -89,17 +77,8 @@ Google Colab 上でノートブックを開き、セルを**上から順番に�
 
 ---
 
-## ファイル構成
-
-\`\`\`
-.
-└── app.py        # Streamlit アプリ本体（%%writefile で自動生成）
-\`\`\`
-
----
-
 ## ライセンス
 
-MIT License. 詳細は [LICENSE](./LICENSE) を参照してください。
+MIT License
 
 本リポジトリの LICENSE は、元コードの著作権表示（`Copyright (c) 2025 ルミナイ株式会社`）を保持しています。
