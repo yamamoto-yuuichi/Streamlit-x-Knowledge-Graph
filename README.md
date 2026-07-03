@@ -8,7 +8,7 @@
 
 本アプリは、ルミナイ株式会社（執筆：宮脇彰梧氏）が MIT ライセンスで公開する Python コードを基に、Google Colab で動作するよう編集したものです。
 
-- 元記事: https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
+元記事: https://zenn.dev/lluminai_tech/articles/887299dcd1d90d
 
 ナレッジグラフ（ノードと関係のネットワーク）を、コードを書かずに GUI 上で構築・編集できる Streamlit アプリです。AI が自動生成したグラフの誤りを人手で修正する Human-in-the-loop なワークフローを想定しています。
 
