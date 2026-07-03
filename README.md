@@ -1,4 +1,4 @@
-# 🕸️ GraphRAG Visual Editor
+🕸️ GraphRAG Visual Editor
 
 ---
 
