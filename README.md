@@ -1,6 +1,5 @@
 # 🕸️ GraphRAG Visual Editor
 
----
 
 ## 概要
 
