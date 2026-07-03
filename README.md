@@ -1,6 +1,4 @@
-# タイトル
-
-🕸️ GraphRAG Visual Editor
+# Streamlitでグラフ作成に挑戦
 
 ---
 
