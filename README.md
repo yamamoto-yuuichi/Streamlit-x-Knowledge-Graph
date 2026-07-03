@@ -1,4 +1,6 @@
-# 🕸️ GraphRAG Visual Editor
+# タイトル
+
+🕸️ GraphRAG Visual Editor
 
 ---
 
