@@ -54,7 +54,7 @@
 
 1. 依存ライブラリをインストールする。
 
-!pip install streamlit streamlit-agraph networkx -q
+   !pip install streamlit streamlit-agraph networkx -q
 
 2. `%%writefile app.py` のセルを実行し、アプリ本体を書き出す。
 
